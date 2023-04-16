@@ -42,8 +42,8 @@ jobs:
     steps:
       - uses: gravity-ui/release-action@v1
         with:
-          github-token: ${{ secrets.GRAVITY_UI_BOT_GITHUB_TOKEN }}
-          npm-token: ${{ secrets.GRAVITY_UI_BOT_NPM_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          npm-token: ${{ secrets.NPM_TOKEN }}
 ```
 
 ### Early development
@@ -53,3 +53,13 @@ in the early stages of project development (before you reach version 1.0.0). In 
 'feat: something' commits and the commits with 'BREAKING CHANGE: something' footer bump a minor component
 automatically. Once you consider your project stable enough, you should add `Release-As: 1.0.0` footer in one of
 the commits and see the usual effect of the 'BREAKING CHANGE: something' footer on you major version.
+
+### Description:
+
+Organizes CI/CD pipeline for all CSH UI packages
+
+- generate Changelog
+- bump version automatically,
+- create a release PR which once merged results in creating a new
+  - GitHub release and
+  - publishing a new version of NPM package

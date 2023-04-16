@@ -1,9 +1,7 @@
 name: csh-ui-release-action
 
 description: |
-  Organizes CI/CD pipeline for all CSH UI packages - generate Changelog and bump version automatically,
-  create a release PR which once merged results in creating a new GitHub release and publishing a new version of NPM
-  package
+  Organizes CI/CD pipeline for all CSH UI packages
 
 inputs:
   node-version:
